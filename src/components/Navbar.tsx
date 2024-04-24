@@ -31,10 +31,10 @@ const Navbar = () => {
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
-      <div className="w-full flex justify-start items-center max-w-7xl mx-auto">
+      <div className="w-[50%] flex justify-between items-center max-w-7xl pl-6">
         <Link
           href="/"
-          className="flex items-center gap-2"
+          className="flex justify-start items-center gap-2"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
