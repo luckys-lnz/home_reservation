@@ -31,7 +31,7 @@ const Navbar = () => {
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
-      <div className="w-[50%] flex justify-between items-center max-w-7xl pl-6">
+      <div className="w-full flex justify-between items-center max-w-7xl px-6">
         <Link
           href="/"
           className="flex justify-start items-center gap-2"
