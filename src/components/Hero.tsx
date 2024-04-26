@@ -1,6 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import { bannerImg, chinese, cuteSmile } from "@/assets";
+import { bannerImg, chinese, cuteSmile, upArrow } from "@/assets";
+import Button from "./Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { bannerFaces } from "@/constants";
 
 function Hero() {
   return (
@@ -23,6 +27,36 @@ function Hero() {
           alt="banner_img"
           className="w-[100px] h-[220px]"
         />
+      </div>
+
+      <div className="flex justify-between items-center">
+        <Button
+          variant="MoreBtn"
+          type="button"
+          title="More"
+          icon={
+            <FontAwesomeIcon
+              icon={faArrowRight}
+              className="h-4 w-4 inline-flex"
+            />
+          }
+        />
+        <div className="flex">
+          {bannerFaces.map((imgProp, index)=>(
+            <div key={index}>
+              {imgProp.faceImg && (
+                <Image 
+                src={imgProp.faceImg}
+                alt={imgProp.description}
+                width={53}
+                height={53}
+                className="p-2"
+                />
+              )}
+
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
