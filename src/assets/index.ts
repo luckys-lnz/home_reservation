@@ -5,6 +5,9 @@ import bannerImg from "./orange_shirt.png"
 import chinese from "./cute_chi.png"
 import cuteSmile from "./cute_smile.png"
 import upArrow from "./nsArrow.png"
+import sofa from "./sofa.jpeg"
+import mapImg from "./mapImg.png"
+
 
 export{
     logo,
@@ -13,6 +16,8 @@ export{
     bannerImg,
     chinese,
     cuteSmile,
-    upArrow
+    upArrow,
+    sofa,
+    mapImg,
     
 }
