@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { bannerImg, chinese, cuteSmile, upArrow } from "@/assets";
+import { bannerImg, chinese, cuteSmile, sofa, mapImg } from "@/assets";
 import Button from "./Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
@@ -29,7 +29,7 @@ function Hero() {
         />
       </div>
 
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center pb-6">
         <Button
           variant="MoreBtn"
           type="button"
@@ -42,24 +42,55 @@ function Hero() {
           }
         />
         <div className="flex">
-          {bannerFaces.map((imgProp, index)=>(
+          {bannerFaces.map((imgProp, index) => (
             <div key={index}>
               {imgProp.faceImg && (
-                <Image 
-                src={imgProp.faceImg}
-                alt={imgProp.description}
-                width={53}
-                height={53}
-                className="p-2"
+                <Image
+                  src={imgProp.faceImg}
+                  alt={imgProp.description}
+                  width={53}
+                  height={53}
+                  className="p-2"
                 />
               )}
-
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="relative bg-white ">
+        <Image src={sofa} alt="room with sofa" className="rounded-[24px]" />
+        
+        {/* overlay */}
+        <div className="absolute top-0 flex p-4 ">
+          <div className="bg-white flex justify-center items-center px-3 rounded-[24px]">
+            <div>
+              <p>Tettey Quarshie East Legon </p>
+              <div className="">
+                <RoundedBtn />
+              </div>
+            </div>
+            <div>
+              <Image src={mapImg} alt="map direction" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 }
+
+const RoundedBtn = () => {
+  return (
+    <div>
+      <button className="bg-black rounded-full p-3">
+        <FontAwesomeIcon
+          icon={faArrowRight}
+          className="h-6 w-6 inline-flex text-white"
+        />
+      </button>
+    </div>
+  );
+};
 
 export default Hero;
