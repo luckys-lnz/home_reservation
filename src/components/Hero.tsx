@@ -60,17 +60,20 @@ function Hero() {
 
       <div className="relative bg-white ">
         <Image src={sofa} alt="room with sofa" className="rounded-[24px]" />
-        
+
         {/* overlay */}
         <div className="absolute top-0 flex p-4 ">
           <div className="bg-white flex justify-center items-center px-3 rounded-[24px]">
             <div>
-              <p>Tettey Quarshie East Legon </p>
+              <p>
+                Tettey Quarshie <br />
+                East Legon{" "}
+              </p>
               <div className="">
                 <RoundedBtn />
               </div>
             </div>
-            <div>
+            <div className="py-3">
               <Image src={mapImg} alt="map direction" />
             </div>
           </div>
