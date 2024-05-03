@@ -7,17 +7,17 @@ import { faArrowRight, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Apartment() {
   return (
-    <div className="p-4 relative">
-      <div className="relative rounded-[24px] overflow-hidden">
+    <div className="p-4 relative ">
+      <div className="relative rounded-[24px] overflow-hidden ">
         <Image
           src={sofa}
           alt="room with sofa"
-          layout="responsive"
           width={1200}
           height={800}
+          className="h-[50vh] w-full"
         />
-        <div className="absolute inset-0 flex flex-col">
-          <div className="bg-black bg-opacity-50 rounded-[24px] p-4 text-white">
+        <div className="absolute inset-0 flex flex-col ">
+          <div className="bg-black bg-opacity-50 h-[50vh] w-full rounded-[24px] p-4  text-white">
             <div className="flex justify-between items-center">
               <div>
                 <p className="text-xl font-bold">
@@ -32,33 +32,35 @@ export default function Apartment() {
                 <Image src={mapImg} alt="map direction" />
               </div>
             </div>
-            <p className="text-wrap">
-              Auctor nibh hendrerit gravida aenean ut dis posuere bibendum at.
-              Mattis velit at adipiscing ut eu.
-            </p>
-            <div className="flex">
-              <Button
-                variant="SelectBtn"
-                type="button"
-                title="Select"
-                icon={
-                  <FontAwesomeIcon
-                    icon={faAngleDown}
-                    className="inline-flex w-4 h-4"
-                  />
-                }
-              />
-              <Button
-                variant="SelectBtn"
-                type="button"
-                title="Location"
-                icon={
-                  <FontAwesomeIcon
-                    icon={faAngleDown}
-                    className="inline-flex w-4 h-4"
-                  />
-                }
-              />
+            <div className="absolute bottom-0 flex-col items-start">
+              <p className="text-balance">
+                Auctor nibh hendrerit gravida aenean ut dis posuere bibendum at.
+                Mattis velit at adipiscing ut eu.
+              </p>
+              <div className="flex gap-2 pb-4 pt-4">
+                <Button
+                  variant="SelectBtn"
+                  type="button"
+                  title="Select"
+                  icon={
+                    <FontAwesomeIcon
+                      icon={faAngleDown}
+                      className="inline-flex w-4 h-4"
+                    />
+                  }
+                />
+                <Button
+                  variant="SelectBtn"
+                  type="button"
+                  title="Location"
+                  icon={
+                    <FontAwesomeIcon
+                      icon={faAngleDown}
+                      className="inline-flex w-4 h-4"
+                    />
+                  }
+                />
+              </div>
             </div>
           </div>
         </div>
