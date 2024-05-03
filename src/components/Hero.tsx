@@ -29,7 +29,7 @@ function Hero() {
         />
       </div>
 
-      <div className="flex justify-between items-center pb-6">
+      <div className="flex justify-between items-center">
         <Button
           variant="MoreBtn"
           type="button"
@@ -57,8 +57,6 @@ function Hero() {
           ))}
         </div>
       </div>
-
-      
     </div>
   );
 }
