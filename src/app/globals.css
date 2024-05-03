@@ -9,4 +9,7 @@
   .MoreBtn {
     @apply text-center text-white bg-black text-[16px] font-[500px] font-['poppins'] leading-[24px];
   }
+  .SelectBtn {
+    @apply text-center text-black bg-white text-[16px] font-[500px] font-['poppins'] leading-[24px];
+  }
 }

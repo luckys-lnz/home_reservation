@@ -3,7 +3,7 @@ import Image from "next/image";
 import { bannerImg, chinese, cuteSmile, sofa, mapImg } from "@/assets";
 import Button from "./Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { bannerFaces } from "@/constants";
 
 function Hero() {
@@ -58,42 +58,9 @@ function Hero() {
         </div>
       </div>
 
-      <div className="relative bg-white ">
-        <Image src={sofa} alt="room with sofa" className="rounded-[24px]" />
-
-        {/* overlay */}
-        <div className="absolute top-0 flex p-4 ">
-          <div className="bg-white flex justify-center items-center px-3 rounded-[24px]">
-            <div>
-              <p>
-                Tettey Quarshie <br />
-                East Legon{" "}
-              </p>
-              <div className="">
-                <RoundedBtn />
-              </div>
-            </div>
-            <div className="py-3">
-              <Image src={mapImg} alt="map direction" />
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 }
-
-const RoundedBtn = () => {
-  return (
-    <div>
-      <button className="bg-black rounded-full p-3">
-        <FontAwesomeIcon
-          icon={faArrowRight}
-          className="h-6 w-6 inline-flex text-white"
-        />
-      </button>
-    </div>
-  );
-};
 
 export default Hero;
