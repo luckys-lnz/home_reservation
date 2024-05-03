@@ -14,7 +14,7 @@ type ButtonProps = {
 };
 
 const GetInTouch_Btn: React.FC<ButtonProps> = ({ type, title, leftIcon, rightIcon, variant, icon, full = false, href, onClick }: ButtonProps) => {
-  const buttonClass = `px-10 py-1.5 rounded-full justify-center items-center inline-flex ${variant} ${full && 'w-full'}`;
+  const buttonClass = `px-5 py-1.5 rounded-full justify-center items-center inline-flex ${variant} ${full && 'w-full'}`;
 
   if (href) {
     return (
