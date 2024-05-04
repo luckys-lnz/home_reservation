@@ -7,6 +7,7 @@ import cuteSmile from "./cute_smile.png"
 import upArrow from "./nsArrow.png"
 import sofa from "./sofa.jpeg"
 import mapImg from "./mapImg.png"
+import sofa2 from "./sofa2.jpeg"
 
 
 export{
@@ -19,5 +20,6 @@ export{
     upArrow,
     sofa,
     mapImg,
+    sofa2,
     
 }

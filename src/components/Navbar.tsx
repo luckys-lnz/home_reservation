@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { logo, menu, close } from "@/assets";
@@ -26,12 +26,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      className={`w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
-      }`}
-    >
-      <div className="w-full flex justify-between items-center px-6">
+    <nav className="w-full flex items-center py-5 px-4 fixed top-0 z-20 md:w-[50%]">
+      <div className="w-full flex justify-between items-center">
         <Link
           href="/"
           className="flex justify-start items-center gap-2"
