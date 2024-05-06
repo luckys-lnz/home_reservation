@@ -1,5 +1,5 @@
 import { title } from "process";
-import { chinese, cuteSmile } from "@/assets";
+import { chinese, cuteSmile, suit } from "@/assets";
 
 export const navLinks =[
     {
@@ -20,6 +20,21 @@ export const bannerFaces =[
     {
         faceImg: chinese,
         description: "face of a chinese"
+    },
+    {
+        faceImg: cuteSmile,
+        description: "smiling face"
+    }
+];
+
+export const banaFacesLg =[
+    {
+        faceImg: chinese,
+        description: "face of a chinese"
+    },
+    {
+        faceImg: suit,
+        description: "man on suit"
     },
     {
         faceImg: cuteSmile,

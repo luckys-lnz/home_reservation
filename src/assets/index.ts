@@ -8,6 +8,7 @@ import upArrow from "./nsArrow.png"
 import sofa from "./sofa.jpeg"
 import mapImg from "./mapImg.png"
 import sofa2 from "./sofa2.jpeg"
+import suit from "./suitGuy.png"
 
 
 export{
@@ -21,5 +22,5 @@ export{
     sofa,
     mapImg,
     sofa2,
-    
+    suit,
 }
