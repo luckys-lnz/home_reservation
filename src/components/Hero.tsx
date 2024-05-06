@@ -1,17 +1,25 @@
 import React from "react";
 import Image from "next/image";
-import { bannerImg, sofa, mapImg, sofa2 } from "@/assets";
+import {
+  bannerImg,
+  sofa,
+  mapImg,
+  sofa2,
+  chinese,
+  cuteSmile,
+  suit,
+} from "@/assets";
 import Button from "./Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import { bannerFaces } from "@/constants";
+import { banaFacesLg, bannerFaces } from "@/constants";
 
 function Hero() {
   return (
     <div className="h-screen flex flex-col md:grid md:grid-cols-2">
       <div className="px-4 md:flex md:flex-col">
-        <div className="mt-16 md:flex-1">
-          <div className="flex grid-cols-2 justify-center items-start">
+        <div className="mt-16 md:flex-1 ">
+          <div className="flex justify-center items-start md:grid-cols-2 md:gap-4">
             <div>
               <h1 className="font-poppins font-[600px] text-[32px] md:text-[64px] leading-[38px] md:leading-[64px] pb-[25px]">
                 Reserve Your Ideal Holiday
@@ -29,10 +37,56 @@ function Hero() {
               alt="banner_img"
               className="w-[100px] h-[220px]"
             />
+
+            {/* SIDE FACE IMAGE AND SUB-IMAGE */}
+            <div className="hidden md:flex md:flex-col md:gap-4 md:justify-evenly md:items-center">
+              <Image
+                src={chinese}
+                alt="face-img"
+                className="w-[53px] h-[53px]"
+              />
+              <Image src={suit} alt="face-img" className="w-[87px] h-[86px]" />
+              <Image
+                src={cuteSmile}
+                alt="face-img"
+                className="w-[53px] h-[53px]"
+              />
+              <Button
+                variant="MoreBtn"
+                type="button"
+                title="More"
+                icon={
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    className="h-4 w-4 inline-flex"
+                  />
+                }
+              />
+            </div>
           </div>
+          <span className="hidden md:flex md:justify-center md:items-center md:gap-4">
+            <h2 className=" font-poppins text-[42px] font-[600px] leading-[56px]">
+              +50k
+            </h2>
+            <p className="text-wrap font-[400px] text-[10px] leading-[14px]">
+              Auctor aenean ut dis posuere.
+            </p>
+            <h2 className=" font-poppins text-[42px] font-[600px] leading-[56px]">
+              +2k
+            </h2>
+            <p className="text-wrap font-[400px] text-[10px] leading-[14px]">
+              Auctor aenean ut dis posuere.
+            </p>
+            <h2 className=" font-poppins text-[42px] font-[600px] leading-[56px]">
+              +5
+            </h2>
+            <p className="text-wrap font-[400px] text-[10px] leading-[14px]">
+              Auctor aenean ut dis posuere.
+            </p>
+          </span>
 
           {/* Main button */}
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center md:hidden">
             <Button
               variant="MoreBtn"
               type="button"
@@ -44,7 +98,7 @@ function Hero() {
                 />
               }
             />
-            <div className="flex">
+            <div className="flex ">
               {bannerFaces.map((imgProp, index) => (
                 <div key={index}>
                   {imgProp.faceImg && (
