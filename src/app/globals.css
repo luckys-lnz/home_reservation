@@ -7,9 +7,18 @@
 @layer utilities {
   /* Button Variants */
   .MoreBtn {
-    @apply text-center text-white bg-black text-[16px] font-[500px] font-['poppins'] leading-[24px];
+    @apply text-center text-white bg-black px-5 py-2 text-[16px] font-[500px] font-['poppins'] leading-[24px];
   }
   .SelectBtn {
     @apply text-center text-black bg-white text-[16px] font-[500px] font-['poppins'] leading-[24px];
+  }
+  .SearchBtn {
+    @apply bg-transparent rounded-full border;
+  }
+  .RoundedBtn {
+    @apply bg-black rounded-full;
+  }
+  .RoundedBtnWhite {
+    @apply bg-white rounded-full;
   }
 }

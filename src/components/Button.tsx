@@ -1,20 +1,28 @@
-import React, { ReactNode, MouseEvent } from 'react';
-import Link from 'next/link';
+import React, { ReactNode, MouseEvent } from "react";
+import Link from "next/link";
 
 type ButtonProps = {
-  type: 'button' | 'submit';
+  type: "button" | "submit";
   title: string;
   leftIcon?: ReactNode;
   rightIcon?: ReactNode;
   icon?: ReactNode;
   variant: string;
-  full?: boolean;
   href?: string;
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
 };
 
-const GetInTouch_Btn: React.FC<ButtonProps> = ({ type, title, leftIcon, rightIcon, variant, icon, full = false, href, onClick }: ButtonProps) => {
-  const buttonClass = `px-5 py-1.5 rounded-full justify-center items-center inline-flex ${variant} ${full && 'w-full'}`;
+const ButtonA: React.FC<ButtonProps> = ({
+  type,
+  title,
+  leftIcon,
+  rightIcon,
+  variant,
+  icon = false,
+  href,
+  onClick,
+}: ButtonProps) => {
+  const buttonClass = `px-5 py-1 rounded-full justify-center items-center inline-flex ${variant}`;
 
   if (href) {
     return (
@@ -43,4 +51,4 @@ const GetInTouch_Btn: React.FC<ButtonProps> = ({ type, title, leftIcon, rightIco
   );
 };
 
-export default GetInTouch_Btn;
+export default ButtonA;
